@@ -1,0 +1,276 @@
+{
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "Basic",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "component_language",
+          "title": {
+            "default": "In which language do you provide the information about your product?",
+            "de": "In welcher Sprache stellen Sie Informationen des Produktes zur Verfügung? "
+          },
+          "description": {
+            "default": "This information allows the laboratory to find products that can be incorporated into the IH-IVD documentation without language barriers.",
+            "de": "Diese Information ermöglicht es dem Labor, Produkte zu finden, die ohne Sprachbarrieren in die hausinterne IVD-Dokumentation aufgenommen werden können."
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "English",
+              "text": {
+                "de": "Englisch"
+              }
+            },
+            {
+              "value": "German",
+              "text": {
+                "de": "Deutsch"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "component_name",
+          "title": {
+            "default": "Product name",
+            "de": "Name des Produktes"
+          },
+          "isRequired": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "component_regulatory_clearance",
+          "title": {
+            "default": "Regulatory clearance",
+            "de": "Regulatorischer Status"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "GLU",
+              "text": {
+                "de": "Allgemeiner Laborartikel",
+                "default": "General Laboratory Use"
+              }
+            },
+            {
+              "value": "CE IVDD",
+              "text": {
+                "default": "CE IVDD (Directive 98/79/EC)",
+                "de": "CE IVDD (Richtlinie 98/79/EG)"
+              }
+            },
+            {
+              "value": "CE IVDR",
+              "text": {
+                "default": "CE IVDR (Regulation (EU) 2017/746)",
+                "de": "CE IVDR (Verordnung (EU) 2017/746)"
+              }
+            },
+            {
+              "value": "CE MDD",
+              "text": {
+                "default": "CE MDD (Directive  93/42/EEC)",
+                "de": "CE MDD (Richtlinie  93/42/EWG)"
+              }
+            },
+            {
+              "value": "CE MDR",
+              "text": {
+                "default": "CE MDR (Regulation (EU) 2017/745)",
+                "de": "CE MDR (Verordnung (EU) 2017/745)"
+              }
+            },
+            {
+              "value": "CE Other",
+              "text": {
+                "de": "Anderes CE"
+              }
+            },
+            {
+              "value": "RUO",
+              "text": {
+                "default": "RUO (Research Use Only)",
+                "de": "RUO (nur für Forschungszwecke engl. Research Use Only)"
+              }
+            },
+            {
+              "value": "Other",
+              "text": {
+                "default": "Other",
+                "de": "Sonstiges"
+              }
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "component_risk_class_IVDR",
+          "visibleIf": "{component_regulatory_clearance} = 'CE IVDR'",
+          "title": {
+            "default": "Risk class IVDR (Annex VIII)",
+            "de": "Risikoklasse IVDR (Annex VIII)"
+          },
+          "isRequired": true,
+          "choices": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "component_list_IVDD",
+          "visibleIf": "{component_regulatory_clearance} = 'CE IVDD'",
+          "title": {
+            "default": "List IVDD (Annex II)",
+            "de": "Liste IVDD (Annex II)"
+          },
+          "description": {
+            "default": "'Other IVD Product' include all products that are neither listed in Annex II (List A or List B) nor intended for self-testing.",
+            "de": "‘Sonstiges IVD Produkt’ beinhaltet alle Produkte, die weder in Anhang II (Liste A oder Liste B) angeführt noch zur Eigenanwendung bestimmt sind."
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "A",
+              "text": {
+                "default": "List A",
+                "de": "Liste A"
+              }
+            },
+            {
+              "value": "B",
+              "text": {
+                "default": "List B",
+                "de": "Liste B"
+              }
+            },
+            {
+              "value": "Other",
+              "text": {
+                "default": "Other IVD Product",
+                "de": "Sonstiges IVD Produkt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "component_risk_class_MDR_MDD",
+          "visibleIf": "{component_regulatory_clearance} = 'CE MDD'",
+          "title": {
+            "default": "Risk class MDD (Annex IX)",
+            "de": "Risikoklasse MDD (Annex IX)"
+          },
+          "isRequired": true,
+          "choices": [
+            "I",
+            "Im",
+            "Is",
+            "IIa",
+            "IIb",
+            "III"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "component_risk_class_MDR",
+          "visibleIf": "{component_regulatory_clearance} = 'CE MDR'",
+          "title": {
+            "default": "Risk class MDR (Annex VIII)",
+            "de": "Risikoklasse MDR (Annex VIII)"
+          },
+          "isRequired": true,
+          "choices": [
+            "I",
+            "Im",
+            "Ir",
+            "Is",
+            "IIa",
+            "IIb",
+            "III"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "component_type",
+          "title": {
+            "default": "Device type",
+            "de": "Produkttyp"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Calibrator",
+              "text": {
+                "de": "Kalibrator - Messreferenzmaterial zur Kalibrierung eines Produkts (IVDR)",
+                "default": "Calibrator - measurement reference material used in the calibration of a device (IVDR)"
+              }
+            },
+            {
+              "value": "Consumable",
+              "text": {
+                "de": "Verbrauchsartikel - Artikel, der für eine vorgeschriebene Verwendung und gegebenenfalls für die Entsorgung in Reinräumen und kontrollierten Umgebungen ausgewählt wurde (ISO 14644-Serie)",
+                "default": "Consumable - item selected for a prescribed use and disposal, if applicable, within cleanrooms and controlled environments (ISO 14644-series)"
+              }
+            },
+            {
+              "value": "Control Material",
+              "text": {
+                "de": "Kontrollmaterial - Substanz, ein Material oder einen Gegenstand, die bzw. der von ihrem bzw. seinem Hersteller für die Verwendung zur Prüfung der Leistungsmerkmale eines Produkts vorgesehen ist (IVDR)",
+                "default": "Control Material - substance, material or article intended by its manufacturer to be used to verify the performance characteristics of a device (IVDR)"
+              }
+            },
+            {
+              "value": "Instrument",
+              "text": {
+                "default": "Instrument - (IVD instrument) equipment or apparatus intended by a manufacturer to be used as an IVD medical device (ISO 18113-1:2022)",
+                "de": "Instrument - (IVD Instrument) Ausrüstung oder Gerät, vom Hersteller zur Verwendung als IVD Medizinprodukt vorgesehen (ISO 18113-1:2022)"
+              }
+            },
+            {
+              "value": "Kit",
+              "text": {
+                "default": "Kit - set of components that are packaged together and intended to be used to perform a specific in vitro diagnostic examination, or a part thereof (IVDR)",
+                "de": "Kit - Gruppe von zusammen verpackten Komponenten, die zur Verwendung für die Durchführung einer spezifischen In-vitro-Untersuchung bestimmt sind, oder einen Teil davon (IVDR)"
+              }
+            },
+            {
+              "value": "Reagent",
+              "text": {
+                "de": "Reagenz - chemische, biologische oder immunologische Bestandteile, Lösungen oder Zubereitungen, die vom Hersteller zur Verwendung als IVD Medizinprodukt vorgesehen sind (ISO 18113-1:2022)",
+                "default": "Reagent - chemical, biological, or immunological components, solutions or preparations intended by the manufacturer to be used as an IVD medical device (ISO 18113-1:2022)"
+              }
+            },
+            {
+              "value": "Software",
+              "text": {
+                "default": "Software - set of computer programs, procedures, and possibly associated documentation and data (EN 62304:2006)",
+                "de": "Software - Reihe von Computerprogrammen, Verfahren und möglicherweise zugehörige Dokumentation und Daten (EN 62304:2006)"
+              }
+            },
+            {
+              "value": "Specimen receptacles",
+              "text": {
+                "de": "Probenbehältnis - ein luftleeres wie auch sonstiges Produkt, das von seinem Hersteller speziell dafür gefertigt wird, aus dem menschlichen Körper stammende Proben unmittelbar nach ihrer Entnahme aufzunehmen und im Hinblick auf eine In-vitro-Untersuchung aufzubewahren (IVDR)",
+                "default": "Specimen receptacles - device, whether of a vacuum‐type or not, specifically intended by its manufacturer for the primary containment and preservation of specimens derived from the human body for the purpose of in vitro diagnostic examination (IVDR)"
+              }
+            },
+            {
+              "value": "System",
+              "text": {
+                "default": "System - combination of products, either packaged together or not, which are intended to be interconnected or combined to achieve a specific medical purpose (MDR)",
+                "de": "System - Kombination von Produkten, die zusammen verpackt sind oder auch nicht und die dazu bestimmt sind, verbunden oder kombiniert zu werden, um einen spezifischen medizinischen Zweck zu erfüllen (MDR)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

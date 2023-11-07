@@ -1,0 +1,35 @@
+component_name,component_language,component_regulatory_clearance,component_list_IVDD,component_risk_class_IVDR,component_risk_class_MDR_MDD,component_risk_class_MDR,component_type
+Genetic Sequencer (model: DNBSEQ-G400),English,CE IVDR,,A,,,Instrument
+Genetic Sequencer (model: DNBSEQ-T7),English,CE IVDR,,A,,,Instrument
+DNA sequencing Library Preparation System (model: MGISP-100 ),English,CE IVDR,,A,,,Instrument
+Automated Nucleic Acid Extraction and Purification System (model: MGISP-100B),English,CE IVDR,,A,,,Instrument
+"High-throughput Automated Sample Preparation System (model: MGISP-960, version: V1)",English,CE IVDR,,A,,,Instrument
+"High-throughput Automated Sample Preparation System (model: MGISP-960, version: V2)",English,CE IVDR,,A,,,Instrument
+"High-throughput Automated Sample Preparation System (model: MGISP-960, version: V3)",English,CE IVDR,,A,,,Instrument
+"High-throughput Automated Sample Preparation System (model: MGISP-960, version: V4)",English,CE IVDR,,A,,,Instrument
+"High-throughput Automated Sample Preparation System (model: MGISP-960, version: V5)",English,CE IVDR,,A,,,Instrument
+"High-throughput Automated Sample Preparation System (model: MGISP-960, version: V6)",English,CE IVDR,,A,,,Instrument
+"High-throughput Automated Sample Preparation System (model: MGISP-960, version: V7)",English,CE IVDR,,A,,,Instrument
+"High-throughput Automated Sample Preparation System (model: MGISP-960, version: V8)",English,CE IVDR,,A,,,Instrument
+"High-throughput Automated Sample Preparation System (model: MGISP-960B, version: V1)",English,CE IVDR,,A,,,Instrument
+"High-throughput Automated Sample Preparation System (model: MGISP-960B, version: V2)",English,CE IVDR,,A,,,Instrument
+"High-throughput Automated Sample Preparation System (model: MGISP-960B, version: V3)",English,CE IVDR,,A,,,Instrument
+HPV DNA Extraction Kit (model: HD01T-96),English,CE IVDR,,A,,,Kit
+Nucleic Acid Extraction Kit (model: OP02-32),English,CE IVDR,,A,,,Kit
+Nucleic Acid Extraction Kit (model: T-1728),English,CE IVDR,,A,,,Kit
+Nucleic Acid Extraction Kit (model: T-96),English,CE IVDR,,A,,,Kit
+Nucleic Acid Extraction Kit (model: VDR02P-96),English,CE IVDR,,A,,,Kit
+Nucleic Acid Extraction Kit (model: VDR03P-32),English,CE IVDR,,A,,,Kit
+Nucleic Acid Extraction Kit (model: VDR03P-96),English,CE IVDR,,A,,,Kit
+Universal Sequencing Reaction Kit（model: G400 SM FCL SE50),English,CE IVDR,,A,,,Kit
+Universal Sequencing Reaction Kit（model: G400 SM FCL SE100),English,CE IVDR,,A,,,Kit
+Universal Sequencing Reaction Kit（model: G400 SM FCL PE50),English,CE IVDR,,A,,,Kit
+Universal Sequencing Reaction Kit（model: G400 SM FCL PE100),English,CE IVDR,,A,,,Kit
+Universal Sequencing Reaction Kit（model: G400 SM FCL PE150),English,CE IVDR,,A,,,Kit
+Universal Sequencing Reaction Kit（model: G400 SM FCS SE100),English,CE IVDR,,A,,,Kit
+Universal Sequencing Reaction Kit（model: G400 SM FCS PE100),English,CE IVDR,,A,,,Kit
+Universal Sequencing Reaction Kit（model: T7 SM FCL SE35),English,CE IVDR,,A,,,Kit
+Universal Sequencing Reaction Kit（model: T7 SM FCL SE50),English,CE IVDR,,A,,,Kit
+Universal Sequencing Reaction Kit（model: T7 SM FCL SE100),English,CE IVDR,,A,,,Kit
+Universal Sequencing Reaction Kit（model: T7 SM FCL PE100),English,CE IVDR,,A,,,Kit
+Universal Sequencing Reaction Kit（model: T7 SM FCL PE150),English,CE IVDR,,A,,,Kit
