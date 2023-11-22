@@ -8,6 +8,7 @@
 * [Running the application](#running-the-application)
   * [On Windows](#on-windows)
   * [On MacOS/ Linux](#on-macos-linux)
+* [Testing the API](#testing-the-api)
 
 ## Prerequisites
 
@@ -24,7 +25,7 @@ a [JSON file](./src/main/resources/survey.json) to us, which serves as the form 
 rendered by the SurveyJS client library.
 
 One such form is used by manufacturers to register components they are producing on the platform
-(see[survey.json](./src/main/resources/survey.json)
+(see [survey.json](./src/main/resources/survey.json)
 and [how it looks for the user](https://surveyjs.io/published?id=6f4e0ee9-c761-4705-9748-331e677adba3)).
 We now faced the challenge to implement a CSV import of multiple products at once.
 Since the validation is done by SurveyJS when using the application,
@@ -53,13 +54,12 @@ When completing a survey, SurveyJS generate a JSON object containing the form da
 ```
 
 A question in the [survey.json](./src/main/resources/survey.json) is only mandatory if both
-flag `visibleIf` and
-`required` are true.
+flag `visibleIf` and `required` are true.
 
 The values in the CSV files match the `choices` in
-the [survey.json](./src/main/resources/survey.json). If a choice is
-a string, it's the string itself. If the choice is an object, the value is taken from the `value`
-property of the
+the [survey.json](./src/main/resources/survey.json).
+If a choice is a string, it's the string itself.
+If the choice is an object, the value is taken from the `value` property of the
 object. The values from the `text` object are only used for i18n.
 
 You can find more information about designing forms with SurveyJS
@@ -85,4 +85,28 @@ mvnw.cmd spring-boot:run
 
 ## Run Spring boot application using Maven Wrapper
 ./mvnw spring-boot:run
+```
+
+## Testing the API
+
+#### 1. Valid file
+
+```bash
+curl -X POST -F 'file=@src/test/resources/valid/valid.csv' http://localhost:8080/api/components-validation
+```
+
+#### 2. Invalid files
+
+```bash
+curl -X POST http://localhost:8080/api/components-validation
+curl -X POST -F 'file=@src/test/resources/invalid/ce-ivdd-missing-fields.csv' http://localhost:8080/api/components-validation
+curl -X POST -F 'file=@src/test/resources/invalid/ce-ivdr-missing-fields.csv' http://localhost:8080/api/components-validation
+curl -X POST -F 'file=@src/test/resources/invalid/ce-mdd-missing-fields.csv' http://localhost:8080/api/components-validation
+curl -X POST -F 'file=@src/test/resources/invalid/ce-mdr-missing-fields.csv' http://localhost:8080/api/components-validation
+curl -X POST -F 'file=@src/test/resources/invalid/invalid-component-list-IVDD.csv' http://localhost:8080/api/components-validation
+curl -X POST -F 'file=@src/test/resources/invalid/missing-name.csv' http://localhost:8080/api/components-validation
+```
+
+```bash
+curl -X POST -F 'file=@src/test/resources/invalid/missing-name.csv' http://localhost:8080/api/components-validation
 ```
